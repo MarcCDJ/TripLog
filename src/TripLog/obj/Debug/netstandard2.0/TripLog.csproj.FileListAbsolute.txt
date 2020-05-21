@@ -1,0 +1,16 @@
+/Volumes/Portable Drive/Development/Xamarin/TripLog/src/TripLog/bin/Debug/netstandard2.0/TripLog.deps.json
+/Volumes/Portable Drive/Development/Xamarin/TripLog/src/TripLog/bin/Debug/netstandard2.0/TripLog.dll
+/Volumes/Portable Drive/Development/Xamarin/TripLog/src/TripLog/bin/Debug/netstandard2.0/ref/TripLog.dll
+/Volumes/Portable Drive/Development/Xamarin/TripLog/src/TripLog/bin/Debug/netstandard2.0/TripLog.pdb
+/Volumes/Portable Drive/Development/Xamarin/TripLog/src/TripLog/obj/Debug/netstandard2.0/TripLog.csprojAssemblyReference.cache
+/Volumes/Portable Drive/Development/Xamarin/TripLog/src/TripLog/obj/Debug/netstandard2.0/App.xaml.g.cs
+/Volumes/Portable Drive/Development/Xamarin/TripLog/src/TripLog/obj/Debug/netstandard2.0/Views/DetailPage.xaml.g.cs
+/Volumes/Portable Drive/Development/Xamarin/TripLog/src/TripLog/obj/Debug/netstandard2.0/Views/MainPage.xaml.g.cs
+/Volumes/Portable Drive/Development/Xamarin/TripLog/src/TripLog/obj/Debug/netstandard2.0/Views/NewEntryPage.xaml.g.cs
+/Volumes/Portable Drive/Development/Xamarin/TripLog/src/TripLog/obj/Debug/netstandard2.0/TripLog.AssemblyInfoInputs.cache
+/Volumes/Portable Drive/Development/Xamarin/TripLog/src/TripLog/obj/Debug/netstandard2.0/TripLog.AssemblyInfo.cs
+/Volumes/Portable Drive/Development/Xamarin/TripLog/src/TripLog/obj/Debug/netstandard2.0/TripLog.csproj.CoreCompileInputs.cache
+/Volumes/Portable Drive/Development/Xamarin/TripLog/src/TripLog/obj/Debug/netstandard2.0/XamlC.stamp
+/Volumes/Portable Drive/Development/Xamarin/TripLog/src/TripLog/obj/Debug/netstandard2.0/TripLog.dll
+/Volumes/Portable Drive/Development/Xamarin/TripLog/src/TripLog/obj/Debug/netstandard2.0/ref/TripLog.dll
+/Volumes/Portable Drive/Development/Xamarin/TripLog/src/TripLog/obj/Debug/netstandard2.0/TripLog.pdb

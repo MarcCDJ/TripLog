@@ -1,0 +1,46 @@
+﻿<Properties StartupConfiguration="{234B414D-FF0F-4A4E-9AFC-E3731D16C67A}|Default">
+  <MonoDevelop.Ide.ItemProperties.test.TestRunner.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.07BCE19C-74C7-4D93-9907-E8851D50C5FD" />
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="TripLog" expanded="True" selected="True">
+            <Node name="src" expanded="True">
+              <Node name="TripLog" expanded="True">
+                <Node name="Modules" expanded="True" />
+                <Node name="Services" expanded="True" />
+                <Node name="Views" expanded="True">
+                  <Node name="DetailPage.xaml" expanded="True" />
+                  <Node name="MainPage.xaml" expanded="True" />
+                  <Node name="NewEntryPage.xaml" expanded="True" />
+                </Node>
+                <Node name="App.xaml" expanded="True" />
+              </Node>
+              <Node name="TripLog.Android" expanded="True">
+                <Node name="Modules" expanded="True" />
+                <Node name="Services" expanded="True" />
+              </Node>
+              <Node name="TripLog.iOS" expanded="True">
+                <Node name="Modules" expanded="True" />
+                <Node name="Services" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="test" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.src.TripLog.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.30483E6D-5682-4C55-9879-0CF37BAA20B8" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.test.TestRunner.Droid PreferredExecutionTarget="Android.Nexus_4_API_27" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.src.TripLog.Android PreferredExecutionTarget="Android.Nexus_4_API_27" />
+</Properties>

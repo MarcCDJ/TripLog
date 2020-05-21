@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "SYzTaod4IWpPr2QN0JJgE8CAK1bdMwcqG4wdhK9sZq/HnoL50dgJ/eUPmJkqIu6w9zoDMAnDzdkAYPFRZO/4hg==",
+  "success": true,
+  "projectFilePath": "/Volumes/Portable Drive/Development/Xamarin/TripLog/src/TripLog.iOS/TripLog.iOS.csproj",
+  "expectedPackageFiles": [
+    "/Users/mcruz/.nuget/packages/portable.ninject/3.3.1/portable.ninject.3.3.1.nupkg.sha512",
+    "/Users/mcruz/.nuget/packages/xamarin.essentials/1.5.3.2/xamarin.essentials.1.5.3.2.nupkg.sha512",
+    "/Users/mcruz/.nuget/packages/xamarin.forms/4.6.0.800/xamarin.forms.4.6.0.800.nupkg.sha512",
+    "/Users/mcruz/.nuget/packages/xamarin.forms.maps/4.6.0.800/xamarin.forms.maps.4.6.0.800.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,296 @@
+{
+  "format": 1,
+  "restore": {
+    "/Volumes/Portable Drive/Development/Xamarin/TripLog/test/TestCommon/TestCommon.csproj": {}
+  },
+  "projects": {
+    "/Volumes/Portable Drive/Development/Xamarin/TripLog/src/TripLog/TripLog.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Volumes/Portable Drive/Development/Xamarin/TripLog/src/TripLog/TripLog.csproj",
+        "projectName": "TripLog",
+        "projectPath": "/Volumes/Portable Drive/Development/Xamarin/TripLog/src/TripLog/TripLog.csproj",
+        "packagesPath": "/Users/mcruz/.nuget/packages/",
+        "outputPath": "/Volumes/Portable Drive/Development/Xamarin/TripLog/src/TripLog/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/mcruz/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Microsoft.CodeAnalysis.FxCopAnalyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Portable.Ninject": {
+              "target": "Package",
+              "version": "[3.3.1, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.5.3.2, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[4.6.0.800, )"
+            },
+            "Xamarin.Forms.Maps": {
+              "target": "Package",
+              "version": "[4.6.0.800, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.300/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Volumes/Portable Drive/Development/Xamarin/TripLog/test/TestCommon/TestCommon.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Volumes/Portable Drive/Development/Xamarin/TripLog/test/TestCommon/TestCommon.csproj",
+        "projectName": "TestCommon",
+        "projectPath": "/Volumes/Portable Drive/Development/Xamarin/TripLog/test/TestCommon/TestCommon.csproj",
+        "packagesPath": "/Users/mcruz/.nuget/packages/",
+        "outputPath": "/Volumes/Portable Drive/Development/Xamarin/TripLog/test/TestCommon/obj/",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/mcruz/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "MonoAndroid90",
+          "Xamarin.iOS10",
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "/Volumes/Portable Drive/Development/Xamarin/TripLog/src/TripLog/TripLog.csproj": {
+                "projectPath": "/Volumes/Portable Drive/Development/Xamarin/TripLog/src/TripLog/TripLog.csproj"
+              }
+            }
+          },
+          "monoandroid90": {
+            "projectReferences": {
+              "/Volumes/Portable Drive/Development/Xamarin/TripLog/src/TripLog/TripLog.csproj": {
+                "projectPath": "/Volumes/Portable Drive/Development/Xamarin/TripLog/src/TripLog/TripLog.csproj"
+              }
+            }
+          },
+          "xamarinios10": {
+            "projectReferences": {
+              "/Volumes/Portable Drive/Development/Xamarin/TripLog/src/TripLog/TripLog.csproj": {
+                "projectPath": "/Volumes/Portable Drive/Development/Xamarin/TripLog/src/TripLog/TripLog.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "FluentAssertions": {
+              "target": "Package",
+              "version": "[5.10.3, )"
+            },
+            "Microsoft.CodeAnalysis.FxCopAnalyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.CodeCoverage": {
+              "target": "Package",
+              "version": "[16.6.1, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.6.1, )"
+            },
+            "Validation": {
+              "target": "Package",
+              "version": "[2.4.22, )"
+            },
+            "Xunit.SkippableFact": {
+              "target": "Package",
+              "version": "[1.4.8, )"
+            },
+            "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.2.1, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "xunit.extensibility.execution": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.300/RuntimeIdentifierGraph.json"
+        },
+        "monoandroid90": {
+          "dependencies": {
+            "FluentAssertions": {
+              "target": "Package",
+              "version": "[5.10.3, )"
+            },
+            "Microsoft.CodeAnalysis.FxCopAnalyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.6.1, )"
+            },
+            "Validation": {
+              "target": "Package",
+              "version": "[2.4.22, )"
+            },
+            "Xunit.SkippableFact": {
+              "target": "Package",
+              "version": "[1.4.8, )"
+            },
+            "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.2.1, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "xunit.extensibility.execution": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.300/RuntimeIdentifierGraph.json"
+        },
+        "xamarinios10": {
+          "dependencies": {
+            "FluentAssertions": {
+              "target": "Package",
+              "version": "[5.10.3, )"
+            },
+            "Microsoft.CodeAnalysis.FxCopAnalyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.6.1, )"
+            },
+            "Validation": {
+              "target": "Package",
+              "version": "[2.4.22, )"
+            },
+            "Xunit.SkippableFact": {
+              "target": "Package",
+              "version": "[1.4.8, )"
+            },
+            "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.2.1, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "xunit.extensibility.execution": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.300/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

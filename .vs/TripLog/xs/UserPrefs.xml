@@ -1,20 +1,23 @@
-﻿<Properties StartupConfiguration="{234B414D-FF0F-4A4E-9AFC-E3731D16C67A}|Default">
+﻿<Properties StartupConfiguration="{9731BFED-AB75-4520-A56A-5EC6EA586F3C}|Default">
   <MonoDevelop.Ide.ItemProperties.test.TestRunner.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.07BCE19C-74C7-4D93-9907-E8851D50C5FD" />
   <MonoDevelop.Ide.Workbench ActiveDocument=".gitignore">
     <Files>
-      <File FileName=".gitignore" Line="1" Column="1" />
+      <File FileName=".gitignore" Line="15" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="TripLog" expanded="True">
             <Node name="Solution Items" expanded="True">
-              <Node name="/Users/mcruz/Documents/Development/GitHub/Xamarin/TripLog/README.md" selected="True" />
+              <Node name="/Users/mcruz/Documents/Development/GitHub/Xamarin/TripLog/.gitignore" selected="True" />
             </Node>
             <Node name="src" expanded="True" />
             <Node name="test" expanded="True" />
           </Node>
         </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>

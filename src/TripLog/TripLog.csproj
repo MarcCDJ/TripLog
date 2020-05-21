@@ -26,5 +26,6 @@
     <Folder Include="ViewModels\" />
     <Folder Include="Services\" />
     <Folder Include="Modules\" />
+    <Folder Include="Controls\" />
   </ItemGroup>
 </Project>

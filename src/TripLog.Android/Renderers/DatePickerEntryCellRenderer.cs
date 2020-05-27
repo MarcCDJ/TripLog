@@ -1,13 +1,12 @@
 ﻿using System;
-using Xamarin.Forms;
-using Xamarin.Forms.Platform.Android;
-using Android.App;
 using Android.Content;
 using Android.Views;
 using Android.Widget;
-using View = Android.Views.View;
 using TripLog.Controls;
 using TripLog.Droid.Renderers;
+using Xamarin.Forms;
+using Xamarin.Forms.Platform.Android;
+using View = Android.Views.View;
 
 [assembly: ExportRenderer(typeof(DatePickerEntryCell), typeof(DatePickerEntryCellRenderer))]
 namespace TripLog.Droid.Renderers
@@ -94,9 +93,7 @@ namespace TripLog.Droid.Renderers
 
         void ShowDatePickerDialogFragment(Context context, DateTime date, Action<DateTime> dateSetCallback)
         {
-#pragma warning disable CS0618 // Type or member is obsolete
-            var fragTransaction = ((Activity)context).FragmentManager.BeginTransaction();
-#pragma warning restore CS0618 // Type or member is obsolete
+            var fragTransaction = context.GetFragmentManager().BeginTransaction();
             var dialog = new DatePickerDialogFragment(context, date, dateSetCallback);
 
             dialog.Show(fragTransaction, "datepicker_dialog");

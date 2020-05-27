@@ -2,6 +2,7 @@
 using Android.App;
 using Android.Content;
 using Android.OS;
+using DialogFragment = Android.Support.V4.App.DialogFragment;
 
 namespace TripLog.Droid.Renderers
 {

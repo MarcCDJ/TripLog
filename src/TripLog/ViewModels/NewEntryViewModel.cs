@@ -85,17 +85,30 @@ namespace TripLog.ViewModels
 
         async Task Save()
         {
-            var newItem = new TripLogEntry
+            if (IsBusy) return;
+            IsBusy = true;
+            try
             {
-                Title = Title,
-                Latitude = Latitude,
-                Longitude = Longitude,
-                Date = Date,
-                Rating = Rating,
-                Notes = Notes
-            };
-            // TODO: Persist entry in a later chapter
-            await NavService.GoBack().ConfigureAwait(false);
+                var newItem = new TripLogEntry
+                {
+                    Title = Title,
+                    Latitude = Latitude,
+                    Longitude = Longitude,
+                    Date = Date,
+                    Rating = Rating,
+                    Notes = Notes
+                };
+
+                // TODO: Remove when pulling data from service; add delay for now.
+                await Task.Delay(3000).ConfigureAwait(true);
+
+                // TODO: Implement persisting entry
+                await NavService.GoBack().ConfigureAwait(false);
+            }
+            finally
+            {
+                IsBusy = false;
+            }
         }
 
         public NewEntryViewModel(INavService navService, ILocationService locService)

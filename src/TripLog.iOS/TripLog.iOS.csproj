@@ -126,7 +126,7 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.6.0.800" />
+    <PackageReference Include="Xamarin.Forms" Version="4.7.0.1080" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
     <PackageReference Include="Portable.Ninject">
       <Version>3.3.1</Version>
@@ -143,5 +143,27 @@
     <Folder Include="Services\" />
     <Folder Include="Modules\" />
     <Folder Include="Renderers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Default-568h%402x.png" />
+    <BundleResource Include="Resources\stars_5%403x.png" />
+    <BundleResource Include="Resources\Default-Portrait.png" />
+    <BundleResource Include="Resources\Default-Portrait%402x.png" />
+    <BundleResource Include="Resources\Default.png" />
+    <BundleResource Include="Resources\Default%402x.png" />
+    <BundleResource Include="Resources\star_1.png" />
+    <BundleResource Include="Resources\star_1%402x.png" />
+    <BundleResource Include="Resources\star_1%403x.png" />
+    <BundleResource Include="Resources\stars_2.png" />
+    <BundleResource Include="Resources\stars_2%402x.png" />
+    <BundleResource Include="Resources\stars_2%403x.png" />
+    <BundleResource Include="Resources\stars_3.png" />
+    <BundleResource Include="Resources\stars_3%402x.png" />
+    <BundleResource Include="Resources\stars_3%403x.png" />
+    <BundleResource Include="Resources\stars_4.png" />
+    <BundleResource Include="Resources\stars_4%402x.png" />
+    <BundleResource Include="Resources\stars_4%403x.png" />
+    <BundleResource Include="Resources\stars_5.png" />
+    <BundleResource Include="Resources\stars_5%402x.png" />
   </ItemGroup>
 </Project>

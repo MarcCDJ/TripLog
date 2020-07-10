@@ -21,13 +21,21 @@
                 Opacity=".8" />
             <StackLayout Padding="10" Grid.Row="1">
                 <Label x:Name="title" HorizontalOptions="Center"
-                       Text="{Binding Entry.Title}" />
+                       Text="{Binding Entry.Title}"
+                       AutomationProperties.IsInAccessibleTree="true"
+                       AutomationProperties.HelpText="Title of trip" />
                 <Label x:Name="date" HorizontalOptions="Center"
-                       Text="{Binding Entry.Date, StringFormat='{0:M}'}" />
+                       Text="{Binding Entry.Date, StringFormat='{0:M}'}"
+                       AutomationProperties.IsInAccessibleTree="true"
+                       AutomationProperties.HelpText="Date of trip" />
                 <Image HorizontalOptions="Center" Source="{Binding Entry.Rating,
-                    Converter={StaticResource RatingToStartImageNameConverter}}" />
+                    Converter={StaticResource RatingToStartImageNameConverter}}"
+                       AutomationProperties.IsInAccessibleTree="true"
+                       AutomationProperties.HelpText="{Binding Entry.Rating, StringFormat='{0} star rating'}" />
                 <Label x:Name="notes" HorizontalOptions="Center"
-                       Text="{Binding Entry.Notes}" />
+                       Text="{Binding Entry.Notes}"
+                       AutomationProperties.IsInAccessibleTree="true"
+                       AutomationProperties.HelpText="Notes from trip" />
             </StackLayout>
         </Grid>
     </ContentPage.Content>

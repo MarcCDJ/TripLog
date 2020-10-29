@@ -23,11 +23,11 @@
                 <Label x:Name="title" HorizontalOptions="Center"
                        Text="{Binding Entry.Title}"
                        AutomationProperties.IsInAccessibleTree="true"
-                       AutomationProperties.HelpText="Title of trip" />
+                       AutomationProperties.HelpText="Title of the trip" />
                 <Label x:Name="date" HorizontalOptions="Center"
                        Text="{Binding Entry.Date, StringFormat='{0:M}'}"
                        AutomationProperties.IsInAccessibleTree="true"
-                       AutomationProperties.HelpText="Date of trip" />
+                       AutomationProperties.HelpText="Date of the trip" />
                 <Image HorizontalOptions="Center" Source="{Binding Entry.Rating,
                     Converter={StaticResource RatingToStartImageNameConverter}}"
                        AutomationProperties.IsInAccessibleTree="true"
@@ -35,7 +35,7 @@
                 <Label x:Name="notes" HorizontalOptions="Center"
                        Text="{Binding Entry.Notes}"
                        AutomationProperties.IsInAccessibleTree="true"
-                       AutomationProperties.HelpText="Notes from trip" />
+                       AutomationProperties.HelpText="Notes from the trip" />
             </StackLayout>
         </Grid>
     </ContentPage.Content>

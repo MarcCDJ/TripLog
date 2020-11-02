@@ -196,6 +196,7 @@ namespace TestRunner.Droid
 			global::TestCommon.Resource.Attribute.collapsedTitleGravity = global::TestRunner.Droid.Resource.Attribute.collapsedTitleGravity;
 			global::TestCommon.Resource.Attribute.collapsedTitleTextAppearance = global::TestRunner.Droid.Resource.Attribute.collapsedTitleTextAppearance;
 			global::TestCommon.Resource.Attribute.collapseIcon = global::TestRunner.Droid.Resource.Attribute.collapseIcon;
+			global::TestCommon.Resource.Attribute.collectionViewStyle = global::TestRunner.Droid.Resource.Attribute.collectionViewStyle;
 			global::TestCommon.Resource.Attribute.color = global::TestRunner.Droid.Resource.Attribute.color;
 			global::TestCommon.Resource.Attribute.colorAccent = global::TestRunner.Droid.Resource.Attribute.colorAccent;
 			global::TestCommon.Resource.Attribute.colorBackgroundFloating = global::TestRunner.Droid.Resource.Attribute.colorBackgroundFloating;
@@ -412,6 +413,7 @@ namespace TestRunner.Droid
 			global::TestCommon.Resource.Attribute.scrimAnimationDuration = global::TestRunner.Droid.Resource.Attribute.scrimAnimationDuration;
 			global::TestCommon.Resource.Attribute.scrimBackground = global::TestRunner.Droid.Resource.Attribute.scrimBackground;
 			global::TestCommon.Resource.Attribute.scrimVisibleHeightTrigger = global::TestRunner.Droid.Resource.Attribute.scrimVisibleHeightTrigger;
+			global::TestCommon.Resource.Attribute.scrollViewStyle = global::TestRunner.Droid.Resource.Attribute.scrollViewStyle;
 			global::TestCommon.Resource.Attribute.searchHintIcon = global::TestRunner.Droid.Resource.Attribute.searchHintIcon;
 			global::TestCommon.Resource.Attribute.searchIcon = global::TestRunner.Droid.Resource.Attribute.searchIcon;
 			global::TestCommon.Resource.Attribute.searchViewStyle = global::TestRunner.Droid.Resource.Attribute.searchViewStyle;
@@ -1432,6 +1434,7 @@ namespace TestRunner.Droid
 			global::TestCommon.Resource.String.fab_transformation_sheet_behavior = global::TestRunner.Droid.Resource.String.fab_transformation_sheet_behavior;
 			global::TestCommon.Resource.String.hide_bottom_view_on_scroll_behavior = global::TestRunner.Droid.Resource.String.hide_bottom_view_on_scroll_behavior;
 			global::TestCommon.Resource.String.mtrl_chip_close_icon_content_description = global::TestRunner.Droid.Resource.String.mtrl_chip_close_icon_content_description;
+			global::TestCommon.Resource.String.overflow_tab_title = global::TestRunner.Droid.Resource.String.overflow_tab_title;
 			global::TestCommon.Resource.String.password_toggle_content_description = global::TestRunner.Droid.Resource.String.password_toggle_content_description;
 			global::TestCommon.Resource.String.path_password_eye = global::TestRunner.Droid.Resource.String.path_password_eye;
 			global::TestCommon.Resource.String.path_password_eye_mask_strike_through = global::TestRunner.Droid.Resource.String.path_password_eye_mask_strike_through;
@@ -1637,6 +1640,7 @@ namespace TestRunner.Droid
 			global::TestCommon.Resource.Style.CardView = global::TestRunner.Droid.Resource.Style.CardView;
 			global::TestCommon.Resource.Style.CardView_Dark = global::TestRunner.Droid.Resource.Style.CardView_Dark;
 			global::TestCommon.Resource.Style.CardView_Light = global::TestRunner.Droid.Resource.Style.CardView_Light;
+			global::TestCommon.Resource.Style.collectionViewTheme = global::TestRunner.Droid.Resource.Style.collectionViewTheme;
 			global::TestCommon.Resource.Style.MainTheme = global::TestRunner.Droid.Resource.Style.MainTheme;
 			global::TestCommon.Resource.Style.MainTheme_Base = global::TestRunner.Droid.Resource.Style.MainTheme_Base;
 			global::TestCommon.Resource.Style.Platform_AppCompat = global::TestRunner.Droid.Resource.Style.Platform_AppCompat;
@@ -1670,6 +1674,8 @@ namespace TestRunner.Droid
 			global::TestCommon.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::TestRunner.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
 			global::TestCommon.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton = global::TestRunner.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton;
 			global::TestCommon.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = global::TestRunner.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow;
+			global::TestCommon.Resource.Style.scrollViewScrollBars = global::TestRunner.Droid.Resource.Style.scrollViewScrollBars;
+			global::TestCommon.Resource.Style.scrollViewTheme = global::TestRunner.Droid.Resource.Style.scrollViewTheme;
 			global::TestCommon.Resource.Style.TextAppearance_AppCompat = global::TestRunner.Droid.Resource.Style.TextAppearance_AppCompat;
 			global::TestCommon.Resource.Style.TextAppearance_AppCompat_Body1 = global::TestRunner.Droid.Resource.Style.TextAppearance_AppCompat_Body1;
 			global::TestCommon.Resource.Style.TextAppearance_AppCompat_Body2 = global::TestRunner.Droid.Resource.Style.TextAppearance_AppCompat_Body2;
@@ -2367,6 +2373,8 @@ namespace TestRunner.Droid
 			global::TestCommon.Resource.Styleable.GradientColor_android_startY = global::TestRunner.Droid.Resource.Styleable.GradientColor_android_startY;
 			global::TestCommon.Resource.Styleable.GradientColor_android_tileMode = global::TestRunner.Droid.Resource.Styleable.GradientColor_android_tileMode;
 			global::TestCommon.Resource.Styleable.GradientColor_android_type = global::TestRunner.Droid.Resource.Styleable.GradientColor_android_type;
+			global::TestCommon.Resource.Styleable.ItemsViewRendererTheme = global::TestRunner.Droid.Resource.Styleable.ItemsViewRendererTheme;
+			global::TestCommon.Resource.Styleable.ItemsViewRendererTheme_collectionViewStyle = global::TestRunner.Droid.Resource.Styleable.ItemsViewRendererTheme_collectionViewStyle;
 			global::TestCommon.Resource.Styleable.LinearLayoutCompat = global::TestRunner.Droid.Resource.Styleable.LinearLayoutCompat;
 			global::TestCommon.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::TestRunner.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
 			global::TestCommon.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::TestRunner.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
@@ -2546,6 +2554,8 @@ namespace TestRunner.Droid
 			global::TestCommon.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground = global::TestRunner.Droid.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground;
 			global::TestCommon.Resource.Styleable.ScrollingViewBehavior_Layout = global::TestRunner.Droid.Resource.Styleable.ScrollingViewBehavior_Layout;
 			global::TestCommon.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop = global::TestRunner.Droid.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop;
+			global::TestCommon.Resource.Styleable.ScrollViewRendererTheme = global::TestRunner.Droid.Resource.Styleable.ScrollViewRendererTheme;
+			global::TestCommon.Resource.Styleable.ScrollViewRendererTheme_scrollViewStyle = global::TestRunner.Droid.Resource.Styleable.ScrollViewRendererTheme_scrollViewStyle;
 			global::TestCommon.Resource.Styleable.SearchView = global::TestRunner.Droid.Resource.Styleable.SearchView;
 			global::TestCommon.Resource.Styleable.SearchView_android_focusable = global::TestRunner.Droid.Resource.Styleable.SearchView_android_focusable;
 			global::TestCommon.Resource.Styleable.SearchView_android_imeOptions = global::TestRunner.Droid.Resource.Styleable.SearchView_android_imeOptions;

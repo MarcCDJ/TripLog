@@ -42,12 +42,15 @@ namespace TripLog.Services
             }
         }
 
-        public async Task GoBack()
+        public void GoBack()
         {
             if (CanGoBack)
             {
-                await XamarinFormsNav.PopAsync(true).ConfigureAwait(false);
-                OnCanGoBackChanged();
+                Device.BeginInvokeOnMainThread(async () =>
+                {
+                    await XamarinFormsNav.PopAsync(true).ConfigureAwait(false);
+                    OnCanGoBackChanged();
+                }); 
             }
         }
 

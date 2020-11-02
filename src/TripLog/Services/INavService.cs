@@ -8,7 +8,7 @@ namespace TripLog.Services
     public interface INavService
     {
         bool CanGoBack { get; }
-        Task GoBack();
+        void GoBack();
         Task NavigateTo<TVM>()
             where TVM : BaseViewModel;
         Task NavigateTo<TVM, TParameter>(TParameter parameter)

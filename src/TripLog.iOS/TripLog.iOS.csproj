@@ -131,6 +131,9 @@
     <PackageReference Include="Portable.Ninject">
       <Version>3.3.1</Version>
     </PackageReference>
+    <PackageReference Include="akavache">
+      <Version>7.1.1</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>

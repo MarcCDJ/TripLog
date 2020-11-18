@@ -23,15 +23,15 @@
 	<key>MinimumOSVersion</key>
 	<string>8.0</string>
 	<key>CFBundleDisplayName</key>
-	<string>TripLog</string>
+	<string>triplog</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.marccruzdj.TripLog</string>
+	<string>com.marccruzdj.triplog</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>CFBundleName</key>
-	<string>TripLog</string>
+	<string>triplog</string>
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/AppIcon.appiconset</string>
 	<key>NSLocationAlwaysUsageDescription</key>
@@ -40,5 +40,18 @@
 	<string>Can we use your location when your application is being used?</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>Can we use your location at all times?</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.marccruzdj.triplog</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>msauth.com.marccruzdj.triplog://auth</string>
+			</array>
+		</dict>
+	</array>
 </dict>
 </plist>

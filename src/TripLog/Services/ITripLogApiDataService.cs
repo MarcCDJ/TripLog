@@ -4,7 +4,7 @@ using TripLog.Models;
 
 namespace TripLog.Services
 {
-    public interface ITripLogDataService
+    public interface ITripLogApiDataService
     {
         Task<IList<TripLogEntry>> GetEntriesAsync();
         Task<TripLogEntry> AddEntryAsync(TripLogEntry entry);

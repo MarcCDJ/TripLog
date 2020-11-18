@@ -9,7 +9,7 @@ namespace TripLog.ViewModels
     public class NewEntryViewModel : BaseValidationViewModel
     {
         readonly ILocationService _locService;
-        readonly ITripLogDataService _tripLogService;
+        readonly ITripLogApiDataService _tripLogService;
 
         string _title;
         public string Title
@@ -109,7 +109,7 @@ namespace TripLog.ViewModels
             }
         }
 
-        public NewEntryViewModel(INavService navService, ILocationService locService, ITripLogDataService tripLogService)
+        public NewEntryViewModel(INavService navService, ILocationService locService, ITripLogApiDataService tripLogService)
             : base(navService)
         {
             _locService = locService;

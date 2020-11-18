@@ -37,10 +37,10 @@ namespace TripLog.ViewModels
             LoadEntries();
         }
 
-        readonly ITripLogDataService _tripLogService;
+        readonly ITripLogApiDataService _tripLogService;
         readonly IBlobCache _cache;
 
-        public MainViewModel(INavService navService, ITripLogDataService tripLogService, IBlobCache cache)
+        public MainViewModel(INavService navService, ITripLogApiDataService tripLogService, IBlobCache cache)
             : base(navService)
         {
             _tripLogService = tripLogService;
@@ -51,7 +51,9 @@ namespace TripLog.ViewModels
         void LoadEntries()
         {
             if (IsBusy)
+            {
                 return;
+            }
             IsBusy = true;
             try
             {

@@ -5,6 +5,16 @@
 		<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyAl1PonF8Yn5zDlH2h1VlSrK75X4UesHKE" />
 		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
 		<uses-library android:name="org.apache.http.legacy" android:required="false" />
+		<!-- TODO: Verify activity -->
+		<activity android:name="microsoft.identity.client.BrowserTabActivity">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<!-- NOTE: Replace SIG_HASH below before building. -->
+				<data android:scheme="msauth" android:host="com.marccruzdj.triplog" android:path="/SIG_HASH" />
+			</intent-filter>
+		</activity>
 	</application>
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />

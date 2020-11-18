@@ -31,6 +31,7 @@ namespace TripLog.Services
                 {
                     request.Content = new StringContent(data, Encoding.UTF8, "application/json");
                 }
+
                 // Add headers to request 
                 if (headers != null)
                 {
@@ -39,8 +40,8 @@ namespace TripLog.Services
                         request.Headers.Add(h.Key, h.Value);
                     }
                 }
-                // Get response
 
+                // Get response
                 using (var client = new HttpClient())
                 using (var response =
                     await client.SendAsync(request, HttpCompletionOption.ResponseContentRead).ConfigureAwait(false))

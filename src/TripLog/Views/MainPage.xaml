@@ -6,6 +6,7 @@
              Title="TripLog">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="New" Command="{Binding NewCommand}" />
+        <ToolbarItem Text="Sign Out" Command="{Binding SignOutCommand}" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <RefreshView 

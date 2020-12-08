@@ -17,3 +17,4 @@ using System.Diagnostics.CodeAnalysis;
 [assembly: SuppressMessage("Globalization", "CA1305:Specify IFormatProvider", Justification = "<Pending>", Scope = "member", Target = "~M:TripLog.Services.TripLogApiDataService.AuthenticateAsync(System.String)~System.Threading.Tasks.Task")]
 [assembly: SuppressMessage("Design", "CA1031:Do not catch general exception types", Justification = "<Pending>", Scope = "member", Target = "~M:TripLog.Services.SimpleGraphService.GetNameAsync~System.Threading.Tasks.Task{System.String}")]
 [assembly: SuppressMessage("Performance", "CA1822:Mark members as static", Justification = "<Pending>", Scope = "member", Target = "~M:TripLog.Services.SimpleGraphService.GetNameAsync~System.Threading.Tasks.Task{System.String}")]
+[assembly: SuppressMessage("Design", "CA1031:Do not catch general exception types", Justification = "<Pending>", Scope = "member", Target = "~M:TripLog.ViewModels.MainViewModel.LoadEntries")]

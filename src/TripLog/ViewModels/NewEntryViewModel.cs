@@ -100,7 +100,7 @@ namespace TripLog.ViewModels
                     Notes = Notes
                 };
 
-                await _tripLogService.AddEntryAsync(newItem).ConfigureAwait(false);
+                _ = await _tripLogService.AddEntryAsync(newItem).ConfigureAwait(false);
                 NavService.GoBack();
             }
             finally

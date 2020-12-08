@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using Akavache;
 using TripLog.Models;
 using TripLog.Services;
@@ -32,18 +33,25 @@ namespace TripLog.ViewModels
         public Command RefreshCommand =>
             _refreshCommand ?? (_refreshCommand = new Command(LoadEntries));
 
+        public Command SignOutCommand =>
+            new Command(async () =>
+                await _authService.SignOutAsync().ConfigureAwait(false));
+
         public override void Init()
         {
             LoadEntries();
+            Debug.WriteLine("Finished loading entries: " + LogEntries.Count);
         }
 
         readonly ITripLogApiDataService _tripLogService;
+        readonly IAuthService _authService;
         readonly IBlobCache _cache;
 
-        public MainViewModel(INavService navService, ITripLogApiDataService tripLogService, IBlobCache cache)
+        public MainViewModel(INavService navService, IAuthService authService, ITripLogApiDataService tripLogService, IBlobCache cache)
             : base(navService)
         {
             _tripLogService = tripLogService;
+            _authService = authService;
             _cache = cache;
             LogEntries = new ObservableCollection<TripLogEntry>();
         }
@@ -58,12 +66,23 @@ namespace TripLog.ViewModels
             try
             {
                 // Load from local cache and then immediately load from API
-                _cache.GetAndFetchLatest("entries", async () => await _tripLogService.GetEntriesAsync().ConfigureAwait(false))
+                _cache.GetAndFetchLatest("entries", async ()
+                        => await _tripLogService.GetEntriesAsync().ConfigureAwait(false)
+                    )
                     .Subscribe(entries =>
                     {
-                        LogEntries = new ObservableCollection<TripLogEntry>(entries);
+                        Debug.WriteLine("*** Subscription ran! ***");
+                        Debug.WriteLine("*** Entries returned: " + entries?.Count + " ***");
+                        if (entries != null)
+                        {
+                            LogEntries = new ObservableCollection<TripLogEntry>(entries);
+                        }
                         IsBusy = false;
                     });
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("Error loading entries: " + ex.ToString());
             }
             finally
             {

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
@@ -10,15 +11,16 @@ namespace TripLog.Services
     public class AuthService : IAuthService
     {
         public Action<string> AuthorizedDelegate { get; set; }
+        public Action<string> NonAuthorizedDelegate { get; set; }
 
-        // NOTE: Set values before building app.
+        // TODO: Place values in resource.
         readonly string APP_ID = "app_id_value";
         readonly string CLIENT_ID = "client_id_value";
         readonly string TENANT_ID = "tenant_id_value";
         readonly string SIG_HASH = "sig_hash_value";
+
         private readonly string[] Scopes =
             {
-                "User.Read",
                 "https://mctriplog.azurewebsites.net/user_impersonation"
             };
 
@@ -45,7 +47,7 @@ namespace TripLog.Services
 
         public AuthService()
         {
-            string authority = $"https://login.microsoftonline.com/{TENANT_ID}/v2.0";
+            string authority = $"https://login.microsoftonline.com/{TENANT_ID}";
             _pca = PublicClientApplicationBuilder.Create(CLIENT_ID)
                .WithIosKeychainSecurityGroup(APP_ID)
                .WithRedirectUri(RedirectUri)
@@ -57,16 +59,19 @@ namespace TripLog.Services
         {
             try
             {
-                var accounts = await _pca.GetAccountsAsync().ConfigureAwait(false);
-                var firstAccount = accounts.FirstOrDefault();
-                var authResult =
+                IEnumerable<IAccount> accounts = await _pca.GetAccountsAsync().ConfigureAwait(false);
+                IAccount firstAccount = accounts.FirstOrDefault();
+                AuthenticationResult authResult =
                     await _pca.AcquireTokenSilent(Scopes, firstAccount)
                             .ExecuteAsync().ConfigureAwait(false);
 
                 // Store the access token securely for later use.
-                var authToken = authResult?.AccessToken;
+                string authToken = authResult?.AccessToken;
                 await SecureStorage.SetAsync("AccessToken", authToken).ConfigureAwait(false);
                 AuthorizedDelegate?.Invoke(authToken);
+
+                string savedToken = await SecureStorage.GetAsync("AccessToken").ConfigureAwait(false);
+                Debug.WriteLine("STORED TOKEN: " + (savedToken != null ? savedToken?.ToString() : "Not Saved"));
 
                 return true;
             }
@@ -75,15 +80,18 @@ namespace TripLog.Services
                 try
                 {
                     // This means we need to login again through the MSAL window.
-                    var authResult =
+                    AuthenticationResult authResult =
                         await _pca.AcquireTokenInteractive(Scopes)
                                 .WithParentActivityOrWindow(ParentWindow)
                                 .ExecuteAsync().ConfigureAwait(false);
 
                     // Store the access token securely for later use.
-                    var authToken = authResult?.AccessToken;
+                    string authToken = authResult?.AccessToken;
                     await SecureStorage.SetAsync("AccessToken", authToken).ConfigureAwait(false);
                     AuthorizedDelegate?.Invoke(authToken);
+
+                    string savedToken = await SecureStorage.GetAsync("AccessToken").ConfigureAwait(false);
+                    Debug.WriteLine("MSAL TOKEN: " + (savedToken != null ? savedToken?.ToString() : "Not Saved"));
 
                     return true;
                 }
@@ -104,7 +112,7 @@ namespace TripLog.Services
         {
             try
             {
-                var accounts = await _pca.GetAccountsAsync().ConfigureAwait(false);
+                IEnumerable<IAccount> accounts = await _pca.GetAccountsAsync().ConfigureAwait(false);
 
                 // Go through all accounts and remove them.
                 while (accounts.Any())
@@ -115,6 +123,7 @@ namespace TripLog.Services
 
                 // Clear our access token from secure storage.
                 SecureStorage.Remove("AccessToken");
+                NonAuthorizedDelegate?.Invoke(null);
 
                 return true;
             }

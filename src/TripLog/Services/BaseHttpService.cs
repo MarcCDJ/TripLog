@@ -45,15 +45,15 @@ namespace TripLog.Services
                 using (var client = new HttpClient())
                 using (var response =
                     await client.SendAsync(request, HttpCompletionOption.ResponseContentRead).ConfigureAwait(false))
-                {
-                    var content = response.Content == null
-                        ? null
-                        : await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-                    if (response.IsSuccessStatusCode)
                     {
-                        result = JsonConvert.DeserializeObject<T>(content);
+                        var content = response.Content == null
+                            ? null
+                            : await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+                        if (response.IsSuccessStatusCode)
+                        {
+                            result = JsonConvert.DeserializeObject<T>(content);
+                        }
                     }
-                }
             }
             return result;
         }

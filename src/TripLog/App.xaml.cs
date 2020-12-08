@@ -31,6 +31,7 @@ namespace TripLog
             Kernel.Load(platformModules);
             var authService = Kernel.Get<IAuthService>();
             authService.AuthorizedDelegate = OnSignIn;
+            authService.NonAuthorizedDelegate = OnSignOut;
             SetMainPage();
         }
 
@@ -58,6 +59,12 @@ namespace TripLog
         void OnSignIn(string accessToken)
         {
             SecureStorage.SetAsync("AccessToken", accessToken);
+            IsSignedIn = !string.IsNullOrWhiteSpace(SecureStorage.GetAsync("AccessToken").Result);
+            SetMainPage();
+        }
+
+        void OnSignOut(string str)
+        {
             IsSignedIn = !string.IsNullOrWhiteSpace(SecureStorage.GetAsync("AccessToken").Result);
             SetMainPage();
         }

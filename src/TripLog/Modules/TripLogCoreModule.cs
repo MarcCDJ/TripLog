@@ -2,7 +2,6 @@
 using Ninject.Modules;
 using TripLog.Services;
 using TripLog.ViewModels;
-using Xamarin.Essentials;
 
 namespace TripLog.Modules
 {
@@ -17,8 +16,7 @@ namespace TripLog.Modules
             Bind<NewEntryViewModel>().ToSelf();
 
             // Core Services
-            var authToken = SecureStorage.GetAsync("AccessToken").Result;
-            var tripLogService = new TripLogApiDataService(new Uri("https://mctriplog.azurewebsites.net"), authToken);
+            TripLogApiDataService tripLogService = new TripLogApiDataService(new Uri("https://mctriplog.azurewebsites.net"));
             Bind<ITripLogApiDataService>()
                 .ToMethod(x => tripLogService)
                 .InSingletonScope();

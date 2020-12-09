@@ -11,7 +11,7 @@
 				<category android:name="android.intent.category.DEFAULT" />
 				<category android:name="android.intent.category.BROWSABLE" />
 				<!-- NOTE: Replace /SIG_HASH below before building. -->
-				<data android:scheme="msauth" android:host="com.marccruzdj.triplog" android:path="/ga0RGNYHvNM5d0SLGQfpQWAPGJ8=" />
+				<data android:scheme="msauth" android:host="com.marccruzdj.triplog" android:path="/SIG_HASH" />
 			</intent-filter>
 		</activity>
 	</application>

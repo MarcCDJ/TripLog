@@ -127,9 +127,9 @@ namespace TripLog.ViewModels
                 Latitude = coords.Latitude;
                 Longitude = coords.Longitude;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                Debug.WriteLine($"Some bad happened... {ex.Message}");
+                // TODO: Handle exception
             }
         }
     }

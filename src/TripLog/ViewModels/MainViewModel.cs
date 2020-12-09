@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
+using System.Reactive.Linq;
 using Akavache;
 using TripLog.Models;
 using TripLog.Services;
@@ -31,7 +32,7 @@ namespace TripLog.ViewModels
 
         Command _refreshCommand;
         public Command RefreshCommand =>
-            _refreshCommand ?? (_refreshCommand = new Command(LoadEntries));
+            _refreshCommand ?? (_refreshCommand = new Command(RefreshEntries));
 
         public Command SignOutCommand =>
             new Command(async () =>
@@ -54,6 +55,13 @@ namespace TripLog.ViewModels
             _authService = authService;
             _cache = cache;
             LogEntries = new ObservableCollection<TripLogEntry>();
+        }
+
+        void RefreshEntries()
+        {
+            _cache.InvalidateAll();
+            _cache.Vacuum();
+            LoadEntries();
         }
 
         void LoadEntries()

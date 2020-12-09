@@ -11,13 +11,15 @@ namespace TripLog.Services
     public class AuthService : IAuthService
     {
         public Action<string> AuthorizedDelegate { get; set; }
-        public Action<string> NonAuthorizedDelegate { get; set; }
+        public Action<string> UnAuthorizedDelegate { get; set; }
 
-        // TODO: Place values in resource.
+        // TODO: Place private keys in resource.
+        #region Private Keys
         readonly string APP_ID = "app_id_value";
         readonly string CLIENT_ID = "client_id_value";
         readonly string TENANT_ID = "tenant_id_value";
         readonly string SIG_HASH = "sig_hash_value";
+        #endregion
 
         private readonly string[] Scopes =
             {
@@ -123,7 +125,7 @@ namespace TripLog.Services
 
                 // Clear our access token from secure storage.
                 SecureStorage.Remove("AccessToken");
-                NonAuthorizedDelegate?.Invoke(null);
+                UnAuthorizedDelegate?.Invoke(null);
 
                 return true;
             }

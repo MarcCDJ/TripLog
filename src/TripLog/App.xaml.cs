@@ -31,7 +31,7 @@ namespace TripLog
             Kernel.Load(platformModules);
             var authService = Kernel.Get<IAuthService>();
             authService.AuthorizedDelegate = OnSignIn;
-            authService.NonAuthorizedDelegate = OnSignOut;
+            authService.UnAuthorizedDelegate = OnSignOut;
             SetMainPage();
         }
 

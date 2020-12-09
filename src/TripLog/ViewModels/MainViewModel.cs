@@ -75,17 +75,20 @@ namespace TripLog.ViewModels
 
             try
             {
-                // Load from local cache and then immediately load from API
-                _cache.GetAndFetchLatest("entries", async ()
-                        => await _tripLogService.GetEntriesAsync().ConfigureAwait(false)
-                    )
-                    .Subscribe(entries =>
-                    {
-                        Debug.WriteLine("*** Subscription ran! ***");
-                        Debug.WriteLine("*** Entries returned: " + entries?.Count + " ***");
-                        LogEntries = new ObservableCollection<TripLogEntry>(entries);
-                        IsBusy = false;
-                    });
+                Device.BeginInvokeOnMainThread(() =>
+                {
+                    // Load from local cache and then immediately load from API
+                    _cache.GetAndFetchLatest("entries", async ()
+                            => await _tripLogService.GetEntriesAsync().ConfigureAwait(false)
+                        )
+                        .Subscribe(entries =>
+                        {
+                            Debug.WriteLine("*** Subscription ran! ***");
+                            Debug.WriteLine("*** Entries returned: " + entries?.Count + " ***");
+                            LogEntries = new ObservableCollection<TripLogEntry>(entries);
+                            IsBusy = false;
+                        });
+                });
             }
             catch (Exception ex)
             {

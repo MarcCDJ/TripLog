@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Threading.Tasks;
 using TripLog.Models;
 using TripLog.Services;
@@ -126,9 +127,9 @@ namespace TripLog.ViewModels
                 Latitude = coords.Latitude;
                 Longitude = coords.Longitude;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                // TODO: handle exceptions from location service
+                Debug.WriteLine($"Some bad happened... {ex.Message}");
             }
         }
     }

@@ -62,7 +62,9 @@ namespace TripLog.ViewModels
             {
                 return;
             }
+
             IsBusy = true;
+
             try
             {
                 // Load from local cache and then immediately load from API
@@ -73,10 +75,7 @@ namespace TripLog.ViewModels
                     {
                         Debug.WriteLine("*** Subscription ran! ***");
                         Debug.WriteLine("*** Entries returned: " + entries?.Count + " ***");
-                        if (entries != null)
-                        {
-                            LogEntries = new ObservableCollection<TripLogEntry>(entries);
-                        }
+                        LogEntries = new ObservableCollection<TripLogEntry>(entries);
                         IsBusy = false;
                     });
             }

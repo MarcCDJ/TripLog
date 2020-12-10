@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Net;
 using System.Net.Http;
 using System.Text;
@@ -54,9 +55,9 @@ namespace TripLog.Services
                         {
                             result = JsonConvert.DeserializeObject<T>(content);
                         }
-                        else if (response.StatusCode == HttpStatusCode.Unauthorized)
+                        else
                         {
-                            throw new UnauthorizedAccessException();
+                            Debug.WriteLine($"Response was not successful: {response.Content}");
                         }
                     }
             }

@@ -59,8 +59,7 @@ namespace TripLog.ViewModels
 
         void RefreshEntries()
         {
-            _cache.InvalidateAll();
-            _cache.Vacuum();
+            // TODO: Handle local cache when GetAndFetchLatest doesn't call the subscription.
             LoadEntries();
         }
 
@@ -85,7 +84,10 @@ namespace TripLog.ViewModels
                         {
                             Debug.WriteLine("*** Subscription ran! ***");
                             Debug.WriteLine("*** Entries returned: " + entries?.Count + " ***");
-                            LogEntries = new ObservableCollection<TripLogEntry>(entries);
+                            if (entries != null)
+                            {
+                                LogEntries = new ObservableCollection<TripLogEntry>(entries);
+                            }
                             IsBusy = false;
                         });
                 });

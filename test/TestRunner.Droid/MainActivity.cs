@@ -1,6 +1,7 @@
 ﻿using Android.App;
 using Android.OS;
-using TestCommon.Unit;
+using TestCommon.HealthCheck;
+using TestCommon.ViewModels;
 using Xunit.Runners.UI;
 using Xunit.Sdk;
 
@@ -19,6 +20,7 @@ namespace TestRunner.Droid
             // or in any reference assemblies			
 
             AddTestAssembly(typeof(HealthCheck).Assembly);
+            AddTestAssembly(typeof(DetailViewModelTests).Assembly);
             // or in any assembly that you load (since JIT is available)
 
 #if false

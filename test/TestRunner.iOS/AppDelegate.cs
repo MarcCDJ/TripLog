@@ -1,5 +1,6 @@
 ﻿using Foundation;
-using TestCommon.Unit;
+using TestCommon.HealthCheck;
+using TestCommon.ViewModels;
 using UIKit;
 using Xunit.Runner;
 using Xunit.Sdk;
@@ -32,6 +33,7 @@ namespace iOS
             // otherwise you need to ensure that the test assemblies will 
             // become part of the app bundle
             AddTestAssembly(typeof(HealthCheck).Assembly);
+            AddTestAssembly(typeof(DetailViewModelTests).Assembly);
 
 #if false
 			// you can use the default or set your own custom writer (e.g. save to web site and tweet it ;-)

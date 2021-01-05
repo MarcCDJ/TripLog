@@ -1,4 +1,5 @@
-﻿using TripLog.Models;
+﻿using TripLog.Exceptions;
+using TripLog.Models;
 using TripLog.Services;
 
 namespace TripLog.ViewModels
@@ -19,6 +20,11 @@ namespace TripLog.ViewModels
         public DetailViewModel(INavService navService)
             : base(navService)
         {
+        }
+
+        public override void Init()
+        {
+            throw new EntryNotProvidedException();
         }
 
         public override void Init(TripLogEntry parameter)
